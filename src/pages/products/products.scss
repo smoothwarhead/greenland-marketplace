@@ -1,0 +1,49 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.product-page {
+
+    @include mixins.page;
+
+
+    .product-page-inner {
+   
+            @include mixins.inner-page;
+
+
+        h2 {
+            @include mixins.heading2;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+
+        .p-a-btns {
+            
+            @include mixins.filters-section
+
+
+        }
+
+        .filter-result {
+            width: 100%;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .products-grid {
+            width: 100%;
+            margin-top: 20px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            // gap: 20px;
+        }
+    }
+
+
+}

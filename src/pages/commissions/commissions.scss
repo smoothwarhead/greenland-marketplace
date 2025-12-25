@@ -1,0 +1,40 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+.commission-page {
+
+    @include mixins.page;
+
+
+    .commission-page-inner {
+   
+            @include mixins.inner-page;
+
+
+        h2 {
+            @include mixins.heading2;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+
+        .p-a-btns {
+            
+            @include mixins.filters-section;
+           
+        }
+
+        .commission-grid {
+            width: 100%;
+            margin-top: 50px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+
+}

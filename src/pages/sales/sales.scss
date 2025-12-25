@@ -1,0 +1,86 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.sales-page {
+    @include mixins.page;
+
+    .sales-page-inner {
+        @include mixins.inner-page;
+
+        h2 {
+            @include mixins.heading2;
+        }
+
+        .p-a-btns {
+
+            @include mixins.filters-section
+        }
+
+        .filter-result {
+            width: 100%;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .sales-grid {
+            width: 100%;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+
+            .grid-title {
+                background: #c1cee6;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+                padding: 0.5rem 1rem;
+                border-radius: 10px 10px 0 0;
+                text-align: center;
+                font-weight: 500;
+
+
+            }
+
+            // .grid-item{
+            //     border: 1px solid red;
+            // }
+
+            .id {
+                width: 10%;
+            }
+
+            .product {
+                width: 30%;
+
+            }
+
+            .customer {
+                width: 20%;
+            }
+
+            .status {
+                width: 15%;
+            }
+
+            .commission {
+                width: 15%;
+            }
+
+            .action {
+                width: 15%;
+
+            }
+
+
+        }
+
+    }
+
+
+}

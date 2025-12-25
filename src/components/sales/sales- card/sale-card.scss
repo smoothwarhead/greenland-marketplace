@@ -1,0 +1,122 @@
+@use "../../../styles/variables";
+@use "../../../styles/mixins";
+
+
+.sale-card {
+    width: 100%;
+    height: fit-content;
+    background: #e4e8f1;
+    border: 1px solid #d8dde7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 10px;
+    font-weight: 400;
+    color: #3c4048;
+
+    .desc {
+        display: flex;
+        gap: 20px;
+
+        .p-d-img {
+            width: 40px;
+            height: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .p-details-name {
+            font-weight: 500;
+            color: #000;
+        }
+
+        .p-details-size,
+        .p-details-bulk {
+            font-size: 0.9rem;
+        }
+
+        .p-details-price {
+            font-weight: 600;
+            color: variables.$pink;
+            margin-top: 8px;
+        }
+
+
+    }
+
+    .p-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pending, .negotiating, .completed, .cancelled {
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 0.2rem 1rem;            
+            border-radius: 30px;
+            font-size: 0.9rem;
+
+        }
+
+        .pending {           
+            background: #c7c3fb;
+            color: #766DC7;
+           
+        }
+        .negotiating {           
+            background: #fff;
+            color: #0b2f8b;
+           
+        }
+
+        .completed {
+            background: #c3fbd6;
+            color: #438e5c;
+          
+        }
+
+        .cancelled {
+            background: #fbc3c3;
+            color: #be5353;
+        
+        }
+
+
+    }
+
+
+
+    .p-action, .p-commission {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+
+        .buyer-ready {
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 0.2rem 1rem;
+            background: variables.$gradient-2;
+            color: #000;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            cursor: pointer;
+
+
+            &:hover{
+                background: variables.$hover-gradient;
+
+            }
+        }
+
+    }
+
+
+}

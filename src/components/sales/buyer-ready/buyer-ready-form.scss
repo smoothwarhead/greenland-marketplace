@@ -1,0 +1,40 @@
+@use "../../../styles/mixins";
+@use "../../../styles/variables";
+
+.buyer-ready-con{
+    @include mixins.dropdownLayout;
+
+   @include mixins.drop-header;
+
+
+   .buyer-form{
+    width: 45%;
+    height: fit-content;
+    padding: 1.5rem 1rem;
+    background: variables.$primary-light;
+    border: 1px solid variables.$secondary-green;
+    margin: 30px auto;
+    border-radius: 10px;
+
+    .buyer-r-input{
+        border: 0.7px solid variables.$secondary-green;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+
+    .submit-sale{
+        margin-top: 50px;
+
+        &:hover{
+            background: variables.$hover-gradient;
+
+        }
+    }
+
+
+   }
+
+
+
+}

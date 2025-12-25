@@ -1,0 +1,86 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+
+.commission-card {
+    width: 20%;
+    height: 32vh;
+    padding: 1rem;
+    background: #e4e8f1;
+    border: 1px solid #d8dde7;
+    border-radius: 20px;
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+
+        .pending,
+        .negotiating,
+        .completed
+         {
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+
+        }
+
+        .pending {
+            background: #c7c3fb;
+            color: #766DC7;
+
+        }
+
+        .negotiating {
+            background: #fff;
+            color: #0b2f8b;
+
+        }
+
+        .completed {
+            background: #c3fbd6;
+            color: #438e5c;
+
+        }
+    }
+
+    .com-img-con{
+        width: 100%;
+        margin-bottom: 20px;
+
+        .com-img{
+            width: 70px;
+            height: 70px;
+            margin: auto;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+
+    .name{
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+
+    .amt{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: variables.$pink;
+    }
+
+
+
+
+}

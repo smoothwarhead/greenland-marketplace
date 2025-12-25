@@ -1,0 +1,236 @@
+@use "../../../styles/variables";
+@use "sass:map";
+
+.agent-sidebar {
+    width: 100%;
+    height: 100%;
+    background: variables.$primary-dark;
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.25rem;
+
+    .sidebar-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-bottom: 6rem;
+
+        .logo-dot {
+            width: 50px;
+            height: 30px;
+
+            // background: linear-gradient(135deg, #22c55e, #22d3ee);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+        }
+
+        .side-logo-text {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: variables.$primary-light;
+
+        }
+
+
+    }
+
+
+    .search-bar {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 4rem;
+
+        .side-search-input {
+            width: 100%;
+            height: 2.5rem;
+            background: transparent;
+            color: #fff;
+            border: 1px solid variables.$grey-3;
+            padding: 15px;
+
+            &::placeholder {
+                color: #8e939d;
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        margin-bottom: 4rem;
+
+        .nav-item {
+            width: 100%;
+
+            a {
+                display: flex;
+                color: variables.$grey;
+                text-align: left;
+                border: none;
+                background: transparent;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                align-items: center;
+                gap: 0.75rem;
+
+
+            }
+
+            .nav-label--active {
+                background: linear-gradient(135deg, #22c55e, #22d3ee);
+                color: #0f172a;
+                font-weight: 600;
+                border-radius: 0.6rem;
+
+            }
+
+
+            &:hover {
+                background: #080e1c;
+                color: #fff;
+            }
+
+
+        }
+
+    }
+
+
+
+    .sidebar-profile {
+
+        width: 100%;
+        margin-bottom: 2rem;
+
+
+        .profile {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+
+            .side-profile-pic {
+                width: 50px;
+                height: 40px;
+
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid white;
+
+                }
+            }
+
+            .side-profile-content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .agent-name {
+                    font-size: 14px;
+                }
+
+                .position {
+                    width: fit-content;
+                    height: fit-content;
+
+                    padding: 2px 10px;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    margin-top: 5px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border: 1px solid rgba(148, 163, 184, 0.45);
+                    color: #fff;
+                }
+            }
+
+            &:hover {
+                background: #080e1c;
+                color: #fff;
+            }
+
+            &.profile--active {
+                background: linear-gradient(135deg, #22c55e, #22d3ee);
+                color: #0f172a;
+                font-weight: 600;
+                border-radius: 0.6rem;
+
+            }
+
+        }
+
+
+
+        .profile-nav {
+            width: 100%;
+
+
+
+            a {
+                display: flex;
+                color: variables.$grey;
+                text-align: left;
+                border: none;
+                background: transparent;
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+                align-items: center;
+                gap: 0.75rem;
+
+
+
+            }
+
+            .nav-label--active {
+                background: linear-gradient(135deg, #22c55e, #22d3ee);
+                color: #0f172a;
+                font-weight: 600;
+                border-radius: 0.6rem;
+
+            }
+
+
+            &:hover {
+                background: #080e1c;
+                color: #fff;
+            }
+
+
+        }
+
+    }
+
+
+
+    .sidebar-footer {
+        font-size: 0.9rem;
+        color: #c4cee0;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+                padding: 0.5rem 1rem;
+
+
+        &:hover {
+            background: #080e1c;
+            color: #fff;
+        }
+    }
+}

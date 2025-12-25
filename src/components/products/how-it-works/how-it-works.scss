@@ -1,0 +1,161 @@
+@use "../../../styles/mixins";
+@use "../../../styles/variables";
+@use "sass:map";
+
+
+
+.how-contents {
+   @include mixins.dropdownLayout;
+   
+   @include mixins.drop-header;
+
+    
+
+
+
+    .steps-process {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-top: 40px;
+
+
+
+        .sp-left {
+            position: relative;
+            width: 40%;
+
+            .sp-left-step {
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                gap: 1.4rem;
+                // margin-bottom: 2.2rem;
+                cursor: pointer;
+
+                .sp-number-con {
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .sp-number {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 2px solid variables.$grey;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                        color: #7b7f8c;
+                        background: #fff;
+                        transition: 0.25s ease;
+
+                        &.active {
+
+                            border-color: variables.$primary-green;
+                            // background: #eaf0ff;
+                            color: variables.$primary-green;
+
+                        }
+                    }
+
+                    .sp-line {
+
+                        width: 2px;
+                        height: 10vh;
+                        background: variables.$grey;
+
+                        &.active {
+
+                            background: variables.$primary-green;
+
+                        }
+                    }
+
+
+                }
+
+                .sp-text-block {
+                    color: #7b7f8c;
+
+                    h3 {
+                        font-size: 1.2rem;
+                        letter-spacing: 1.1px;
+                        font-weight: 600;
+                        margin-bottom: 0.5rem;
+                        transition: 0.25s;
+
+
+                        &.active {
+                            color: #000;
+
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+
+        .sp-right {
+            width: 55%;
+            height: 65vh;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+
+
+            overflow-y: scroll;
+
+
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: none;
+                border-radius: 20px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: transparent;
+                border-radius: 10px;
+            }
+
+            .sp-card {
+                width: 45%;
+                height: 20vh;
+                margin-bottom: 10px;
+                transition: transform 0.3s ease;
+
+                .sp-card-img {
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+
+                &.active {
+                    // transform: scale(1.1);
+                    margin-right: 10px;
+                    height: 30vh;
+
+                }
+            }
+
+
+        }
+
+    }
+
+}

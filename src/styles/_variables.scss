@@ -1,0 +1,44 @@
+
+$grey-3: #dbdbdb;
+
+$grey-2: #333333;
+$grey: #c9c8c6;
+$primary-light: #f6f3e3;
+
+
+
+$primary-dark: #0f172a;
+
+
+$primary-green: #7A9A1B;
+
+$secondary-green: #A2B568;
+
+$dark-green: #46553B;
+$pink: #CB61BA;
+
+
+$blue: #3662C7;
+
+$gradient: linear-gradient(135deg, $pink, $primary-green);
+$hover-gradient: linear-gradient(135deg, $pink, $dark-green);
+
+
+$gradient-2: linear-gradient(135deg, #22c55e, #22d3ee);
+
+
+
+
+
+$layout-width: (
+  "1": 98%,
+  "2": 90%,
+  "3": 80%,
+  
+);
+
+$sidebar-width: 22%;
+$topbar-height: 9vh;
+
+$padding: 1.5%;
+

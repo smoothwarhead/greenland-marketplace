@@ -1,0 +1,134 @@
+@import url("https://use.typekit.net/jtf2ewr.css");
+
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-Light.eot"); */
+  src: url("./assets/fonts/Industry-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-Bold.eot"); */
+  src: url("./assets/fonts/Industry-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-BoldItalic.eot"); */
+  src: url("./assets/fonts/Industry-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-LightItalic.eot"); */
+  src: url("./assets/fonts/Industry-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-Book.eot"); */
+  src: url("./assets/fonts/Industry-Book.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-BlackItalic.eot"); */
+  src: url("./assets/fonts/Industry-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-BookItalic.eot"); */
+  src: url("./assets/fonts/Industry-BookItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-DemiItalic.eot"); */
+  src: url("./assets/fonts/Industry-DemiItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  /* src: url("../fonts/industry/Industry-Black.eot"); */
+  src: url("./assets/fonts/Industry-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/industry/Industry-Medium.eot");
+  src: url("./assets/fonts/Industry-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/industry/Industry-MediumItalic.eot");
+  src: url("./assets/fonts/Industry-MediumItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Industry";
+  src: url("../fonts/industry/Industry-Demi.eot");
+  src: url("./assets/fonts/Industry-Demi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+:root {
+  font-family: 'Industry';
+  line-height: 1.5;
+  /* font-weight: 400; */
+
+  background: #F5F5F7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

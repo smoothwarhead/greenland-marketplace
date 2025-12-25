@@ -1,0 +1,233 @@
+@use "../../styles/mixins";
+@use "../../styles/variables";
+
+
+.agent-dashboard {
+  display: flex;
+  color: #111827;
+
+
+  /* Main */
+
+  .agent-main {
+    flex: 1;
+    padding: 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+
+
+
+    .agent-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .agent-header h1 {
+      @include mixins.heading2;
+
+    }
+
+    .agent-header p {
+      margin: 0;
+      // color: #6b7280;
+      font-size: 1rem;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #ecfdf5;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+    }
+
+
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    /* Stats */
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      background: #ffffff;
+      border-radius: 0.9rem;
+      padding: 1.2rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+      border: 1px solid #e5e7eb;
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      
+    }
+
+    .stat-value {
+      display: block;
+      margin: 1.5rem 0;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: variables.$pink;
+    }
+
+    .stat-caption {
+      font-size: 0.8rem;
+      // color: #9ca3af;
+      margin-top: 0.25rem;
+    }
+
+  }
+
+
+}
+
+
+
+
+
+/* Buttons */
+
+.btn-primary,
+.btn-outline,
+.btn-text {
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #22c55e, #22d3ee);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  opacity: 0.95;
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #22d3ee;
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+}
+
+.btn-text {
+  background: transparent;
+  color: #6b7280;
+  padding-inline: 0;
+}
+
+.btn-text:hover {
+  color: #111827;
+}
+
+
+
+
+/* Status Pills */
+
+.status-pill {
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+.status-verifying {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.status-buyer-not-ready {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.status-closed---paid,
+.status-closed-paid {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.status-paid {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+
+/* Profile */
+
+.profile-form {
+  margin-top: 1rem;
+  max-width: 480px;
+}
+
+.profile-form .form-row {
+  margin-bottom: 0.75rem;
+}
+
+.profile-actions {
+  margin-top: 0.8rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .agent-dashboard {
+    flex-direction: column;
+  }
+
+  .agent-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+
+  }
+
+  .agent-main {
+    padding: 1rem;
+  }
+
+  .stats-row {
+
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,184 @@
+@use './variables';
+@use "sass:map";
+
+
+
+@mixin page {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 2rem;
+}
+
+@mixin inner-page {
+    width: 100%;
+    height: 95vh;
+    overflow-y: scroll;
+
+
+    &::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: none;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 10px;
+    }
+}
+
+@mixin gradient-text {
+    //    font-size: 2rem;
+    font-weight: 600;
+
+    //    background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99, #ea4335 );
+    background: linear-gradient(to right, variables.$pink, #c97643, #8d8a9a, #ea4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text;
+
+
+}
+
+
+@mixin logo-gradient-text {
+    //    font-size: 2rem;
+    font-weight: 600;
+
+    background: linear-gradient(to right, variables.$primary-light, #22c55e, #22d3ee);
+    //    background: linear-gradient(to right, #4285f4, #34a853, #fbbc05, #ea4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-clip: text;
+
+
+}
+
+@mixin heading2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    @include gradient-text
+}
+
+
+
+@mixin filters-section {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // gap: 50px;
+
+    .p-a-btn {
+        width: fit-content;
+        height: fit-content;
+        padding: 8px 30px;
+        border-radius: 30px;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+
+    .how-it-works {
+        background: variables.$gradient;
+        color: variables.$primary-light;
+
+        &:hover {
+            background: variables.$hover-gradient;
+
+        }
+
+    }
+
+
+
+    .filters {
+        display: flex;
+        gap: 30px;
+
+        .filter-btn {
+            background: #fff;
+            color: variables.$dark-green;
+            border: 1px solid variables.$grey;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+
+            &:hover {
+                background: variables.$grey-3;
+
+            }
+
+
+
+        }
+
+        .filter-btn-active {
+            background: variables.$grey-3;
+
+        }
+    }
+
+
+}
+
+
+@mixin dropdownLayout {
+    width: map.get(variables.$layout-width, "3");
+    margin: auto;
+    padding: 10px 0;
+}
+
+
+@mixin drop-header {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        @include heading2;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@mixin content-page {
+
+    @include page;
+    border: 1px solid red;
+
+
+    .dash-page-inner {
+   
+            @include inner-page;
+
+
+        h2 {
+            @include heading2;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+
+        .p-a-btns {
+            
+            @include filters-section;
+           
+        }
+
+     
+    }
+
+
+}
